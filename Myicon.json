@@ -3,6 +3,10 @@
   "description": "自定义图标订阅",
   "icons": [
     {
+      "name": "Github",
+      "url": "https://raw.githubusercontent.com/Voring/tools/main/icons/Github.png"
+    },
+    {
       "name": "Adguard",
       "url": "https://raw.githubusercontent.com/Voring/tools/main/icons/Adguard.png"
     },
