@@ -1,11 +1,13 @@
 #!name=ChangeUA
 #!desc=更换 User-Agent 以提升体验，使用手机百度 Quark 的 User-Agent。
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Shin-Miya/Shin-Miya-1022.png
 
-[Header Rewrite]
+[Rewrite]
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）
-http-request ^https?:\/\/www\.zhihu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
+^https?:\/\/www\.zhihu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
 # 百度（全站替换为手机百度 Quark 的 User-Agent）
-http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
+^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace-regex User-Agent .+iPhone.+ "
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/12.0 Mobile/68.0 Firefox/12F70 Safari/637.36 Quark/5.0.4.128 UCBrowser/12.0.4.985 baiduboxapp/5.2.5.10 MQQBrowser/9.2.1.2965 XiaoMi/MiuiBrowser/12.9.2 SearchCraft/3.0.0 ALiSearchApp/3.4 AliApp(TB/9.5.6) BingWeb/7.2 TBS/637.36 Weiyun/7.9.37 (Android) Weiyun(zh-Hans)/737.36"
 
 [MITM]
-hostname = %APPEND% *.baidu.com, www.zhihu.com
+hostname = *.baidu.com, www.zhihu.com
