@@ -42,5 +42,18 @@
       "name": "Picsew",
       "url": "https://raw.githubusercontent.com/Voring/tools/main/icons/Picsew.png"
     }
+    
+    {
+      "name": "AssppPro",
+      "url": "https://raw.githubusercontent.com/Voring/tools/main/icons/AssppPro.png"
+    },
+    {
+      "name": "AllMyBatteries",
+      "url": "https://raw.githubusercontent.com/Voring/tools/main/icons/AllMyBatteries.png"
+    },
+    {
+      "name": "123pan",
+      "url": "https://raw.githubusercontent.com/Voring/tools/main/icons/123pan.png"
+    }
   ]
 }
